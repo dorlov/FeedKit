@@ -127,6 +127,7 @@ extension RSSFeed {
         case .rssChannelItunesType:                                 self.iTunes?.iTunesType                                         = self.iTunes?.iTunesType?.appending(string) ?? string
         case .rssChannelItemItunesAuthor:                           self.items?.last?.iTunes?.iTunesAuthor                          = self.items?.last?.iTunes?.iTunesAuthor?.appending(string) ?? string
         case .rssChannelItemItunesBlock:                            self.items?.last?.iTunes?.iTunesBlock                           = self.items?.last?.iTunes?.iTunesBlock?.appending(string) ?? string
+        case .rssChannelItunesImage: self.items?.last?.iTunes?.iTunesImage?.url = string
         case .rssChannelItemItunesDuration:                         self.items?.last?.iTunes?.iTunesDuration                        = string.toDuration()
         case .rssChannelItemItunesExplicit:                         self.items?.last?.iTunes?.iTunesExplicit                        = self.items?.last?.iTunes?.iTunesExplicit?.appending(string) ?? string
         case .rssChannelItemItunesIsClosedCaptioned:                self.items?.last?.iTunes?.isClosedCaptioned                     = self.items?.last?.iTunes?.isClosedCaptioned?.appending(string) ?? string
